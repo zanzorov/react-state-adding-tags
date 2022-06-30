@@ -1,0 +1,81 @@
+.app {
+  width: 400px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.app .form {
+  display: flex;
+}
+.app input {
+  flex: 1;
+  border: 1px solid lightskyblue;
+  border-radius: 4px;
+  outline: none;
+  padding: 6px 12px;
+  margin-right: 8px;
+}
+.app input:focus {
+  border: 2px solid lightskyblue;
+}
+.app .form_btn {
+  border: none;
+  background-color: blue;
+  border-radius: 4px;
+  padding: 6px 12px;
+  color: white;
+  cursor: pointer;
+}
+.app .form_btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.is-error {
+  box-shadow: 4px 4px 6px red;
+}
+.text_error {
+  font-size: 12px;
+  color: red;
+  margin-top: 6px;
+  padding-left: 12px;
+}
+.tags {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightskyblue;
+  border-radius: 22px;
+  margin-right: 16px;
+  margin-top: 16px;
+}
+.tag-text {
+  font-size: 14px;
+  color: blue;
+  padding: 0px 6px;
+}
+.actions {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 4px;
+}
+
+.tag_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  font-size: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: blue;
+  color: lightskyblue;
+  cursor: pointer;
+}
