@@ -7,20 +7,8 @@ function App() {
   const [textError, setTextError] = useState(
     "Поле ввода не должно быть пустым"
   );
-  const [tags, setTags] = useState([
-    {
-      text: "JavaScript",
-      diff: "easy",
-    },
-    {
-      text: "TypeScript",
-      diff: "easy",
-    },
-    {
-      text: "PHP",
-      diff: "easy",
-    },
-  ]);
+  const [tags, setTags] = useState(["JavaScript","TypeScript","PHP"]);
+  
   const [newTag, setNewTag] = useState("");
 
   const handleTag = (e) => {
@@ -47,10 +35,10 @@ function App() {
   };
 
   const addTag = () => {
-    if (tags.some((tag) => tag.text === newTag)) {
+    if (tags.some((tag) => tag === newTag)) {
       alert("this tag already exists");
     } else {
-      setTags([...tags, { text: newTag, diff: "easy" }]);
+      setTags([...tags, newTag]);
     }
     setNewTag("");
   };
