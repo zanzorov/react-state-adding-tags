@@ -2,9 +2,7 @@ import { useState } from "react";
 import Form from "./Form";
 import Tags from "./Tags";
 
-
 function App() {
-  //const [text, setText] = useState("");
   const [blur, setBlur] = useState(false);
   const [textError, setTextError] = useState(
     "Поле ввода не должно быть пустым"
@@ -49,9 +47,7 @@ function App() {
   };
 
   const addTag = () => {
-    if (newTag === "") {
-      alert("type something");
-    } else if (tags.some((tag) => tag.text === newTag)) {
+    if (tags.some((tag) => tag.text === newTag)) {
       alert("this tag already exists");
     } else {
       setTags([...tags, { text: newTag, diff: "easy" }]);
@@ -65,11 +61,10 @@ function App() {
       <Form
         newTag={newTag}
         handleTag={handleTag}
-        addTag={addTag}
         handleBlur={handleBlur}
         blur={blur}
         textError={textError}
-        tags={tags}
+        addTag={addTag}
       />
       <Tags tags={tags} deleteTag={deleteTag} />
     </div>
